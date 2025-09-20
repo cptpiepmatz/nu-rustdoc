@@ -21,6 +21,8 @@ jobs:
 
       - name: Run build script with Nu
         run: nu make.nu
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
